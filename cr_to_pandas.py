@@ -8,5 +8,5 @@ def cr_to_pandas(tnr):
     start = int(start)
     end = (df[df['From the Tournament-Database of Chess-Results http://chess-results.com']=='Annotation'].index.values) - 1
     end = int(len(df) - end)
-    df = pd.read_excel(link, skiprows=inicio, skipfooter=fim)
+    df = pd.read_excel(link, skiprows=start, skipfooter=end)
     return df
